@@ -1,0 +1,28 @@
+{
+  "name": "universal-engineering",
+  "version": "1.3.0",
+  "schema_version": 1,
+  "entrypoint": "SKILL.md",
+  "supported_ai_adapters": [
+    "generic-skill",
+    "agents-md",
+    "claude-md",
+    "prompt-instruction"
+  ],
+  "evidence_schema": "automation/evidence-schema.json",
+  "automation": {
+    "baseline_gate": "automation/run_engineering_gate.py",
+    "project_profile_detector": "automation/detect_project_profile.py",
+    "project_gate_runner": "automation/run_project_gates.py",
+    "quality_scorer": "automation/score_quality.py"
+  },
+  "compatibility": {
+    "minimum_python": "3.10",
+    "rule_priority": [
+      "user-request",
+      "project-rules",
+      "project-profile",
+      "universal-skill"
+    ]
+  }
+}

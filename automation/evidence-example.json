@@ -1,0 +1,46 @@
+{
+  "project": "example-project",
+  "change_id": "CHANGE-001",
+  "generated_at": "2026-09-26T00:00:00Z",
+  "stages": [
+    {
+      "id": "stage-0",
+      "name": "workspace-intake",
+      "status": "PASS",
+      "inputs": [
+        "user request",
+        "project rules"
+      ],
+      "artifacts": [
+        "docs/change-scope.md"
+      ],
+      "checks": [
+        {
+          "id": "workspace-status",
+          "description": "Existing changes were recorded before editing.",
+          "status": "PASS",
+          "command_or_evidence": "git status --short"
+        }
+      ],
+      "failure_handling": "Stop before editing if ownership or workspace boundaries are unclear."
+    },
+    {
+      "id": "stage-8",
+      "name": "verification",
+      "status": "NOT_RUN",
+      "inputs": [
+        "current build"
+      ],
+      "artifacts": [],
+      "checks": [
+        {
+          "id": "product-runtime",
+          "description": "The real product flow was exercised.",
+          "status": "NOT_RUN",
+          "command_or_evidence": "Not executed because the runtime dependency is unavailable."
+        }
+      ],
+      "failure_handling": "Do not report delivery as complete; resolve the environment blocker or record an approved waiver."
+    }
+  ]
+}

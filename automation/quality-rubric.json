@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "dimensions": [
+    {"id": "requirements", "name": "需求完整度", "weight": 10},
+    {"id": "architecture", "name": "架构风险", "weight": 15},
+    {"id": "testing", "name": "测试证据", "weight": 20},
+    {"id": "performance", "name": "性能证据", "weight": 10},
+    {"id": "security", "name": "安全风险", "weight": 15},
+    {"id": "migration", "name": "迁移能力", "weight": 10},
+    {"id": "observability", "name": "可观测性", "weight": 10},
+    {"id": "delivery", "name": "交付可信度", "weight": 10}
+  ],
+  "levels": [
+    {"min": 0, "max": 39, "name": "Initial"},
+    {"min": 40, "max": 59, "name": "Managed"},
+    {"min": 60, "max": 74, "name": "Defined"},
+    {"min": 75, "max": 89, "name": "Measured"},
+    {"min": 90, "max": 100, "name": "Resilient"}
+  ]
+}

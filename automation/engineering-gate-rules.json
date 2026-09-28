@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "name": "universal-engineering-default-gates",
+  "description": "Portable baseline checks for the Universal Engineering Skill.",
+  "rules": [
+    {
+      "id": "SKILL-001",
+      "severity": "blocker",
+      "scope": "skill",
+      "check": "skill_frontmatter",
+      "description": "The skill entry file must have a closed YAML frontmatter block."
+    },
+    {
+      "id": "DOC-001",
+      "severity": "error",
+      "scope": "markdown",
+      "check": "relative_markdown_links",
+      "description": "Relative Markdown links must point to existing files."
+    },
+    {
+      "id": "SEC-001",
+      "severity": "blocker",
+      "scope": "text",
+      "check": "secret_patterns",
+      "description": "Tracked text must not contain obvious private keys, access tokens or credential assignments."
+    },
+    {
+      "id": "EVIDENCE-001",
+      "severity": "error",
+      "scope": "text",
+      "check": "evidence_status_consistency",
+      "description": "NOT_RUN, BLOCKED and UNKNOWN evidence cannot be presented as PASS."
+    },
+    {
+      "id": "EVIDENCE-002",
+      "severity": "error",
+      "scope": "evidence",
+      "check": "evidence_schema",
+      "description": "Stage evidence must contain required fields and honest status values."
+    },
+    {
+      "id": "RULE-001",
+      "severity": "error",
+      "scope": "rules",
+      "check": "rule_schema",
+      "description": "Every machine-readable rule must contain id, severity, scope, check and description."
+    },
+    {
+      "id": "VERSION-001",
+      "severity": "error",
+      "scope": "skill",
+      "check": "version_consistency",
+      "description": "VERSION and skill-manifest.json must declare the same Skill version; an optional SKILL.md version must agree when present."
+    }
+  ]
+}

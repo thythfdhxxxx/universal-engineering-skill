@@ -1,0 +1,55 @@
+{
+  "project": "example-project",
+  "root": ".",
+  "detected": {
+    "languages": [
+      {
+        "name": "Rust",
+        "source": "Cargo.toml"
+      }
+    ],
+    "frameworks": [],
+    "package_managers": [
+      "cargo"
+    ],
+    "platforms": [
+      "unknown"
+    ]
+  },
+  "declared": {
+    "owner": "team-name",
+    "default_configuration": "debug"
+  },
+  "rules": [
+    "AGENTS.md",
+    "CONTRIBUTING.md"
+  ],
+  "commands": [
+    {
+      "id": "rust-format",
+      "category": "format",
+      "command": [
+        "cargo",
+        "fmt",
+        "--",
+        "--check"
+      ],
+      "cwd": ".",
+      "required": true,
+      "timeout_seconds": 300,
+      "allow_exit_codes": [
+        0
+      ]
+    }
+  ],
+  "gates": {
+    "required_categories": [
+      "format",
+      "build",
+      "unit"
+    ]
+  },
+  "conflicts": [],
+  "assumptions": [],
+  "generated_at": "2026-09-26T00:00:00Z"
+}

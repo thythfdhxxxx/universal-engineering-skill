@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "description": "Portable evidence format for Universal Engineering execution stages.",
+  "required_top_level": [
+    "project",
+    "change_id",
+    "generated_at",
+    "stages"
+  ],
+  "stage_statuses": [
+    "PASS",
+    "FAIL",
+    "NOT_RUN",
+    "BLOCKED",
+    "WAIVED",
+    "UNKNOWN"
+  ],
+  "required_stage_fields": [
+    "id",
+    "name",
+    "status",
+    "inputs",
+    "artifacts",
+    "checks",
+    "failure_handling"
+  ],
+  "check_statuses": [
+    "PASS",
+    "FAIL",
+    "NOT_RUN",
+    "BLOCKED",
+    "WAIVED",
+    "UNKNOWN"
+  ],
+  "required_check_fields": [
+    "id",
+    "description",
+    "status",
+    "command_or_evidence"
+  ]
+}

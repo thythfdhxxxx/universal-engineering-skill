@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "required": [
+    "project",
+    "root",
+    "detected",
+    "declared",
+    "rules",
+    "commands",
+    "gates",
+    "conflicts",
+    "assumptions",
+    "generated_at"
+  ],
+  "command_required": [
+    "id",
+    "category",
+    "command",
+    "cwd",
+    "required",
+    "timeout_seconds",
+    "allow_exit_codes"
+  ],
+  "gate_categories": [
+    "format",
+    "typecheck",
+    "build",
+    "unit",
+    "integration",
+    "system",
+    "dependency",
+    "security",
+    "performance",
+    "package"
+  ]
+}

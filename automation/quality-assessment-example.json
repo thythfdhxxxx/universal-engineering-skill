@@ -1,0 +1,14 @@
+{
+  "project": "example-project",
+  "change_id": "CHANGE-001",
+  "dimensions": {
+    "requirements": {"score": 4, "evidence": ["docs/requirements.md"], "blockers": []},
+    "architecture": {"score": 3, "evidence": ["docs/architecture.md"], "blockers": []},
+    "testing": {"score": 4, "evidence": ["test-report.json"], "blockers": []},
+    "performance": {"score": 2, "evidence": ["benchmark.txt"], "blockers": []},
+    "security": {"score": 4, "evidence": ["security-report.json"], "blockers": []},
+    "migration": {"score": 3, "evidence": ["migration-plan.md"], "blockers": []},
+    "observability": {"score": 3, "evidence": ["diagnostics.md"], "blockers": []},
+    "delivery": {"score": 4, "evidence": ["evidence.json"], "blockers": []}
+  }
+}
